@@ -7,7 +7,7 @@ import { addToCart, updateQuantity, removeFromCart } from '@/redux/slices/cartSl
 import LoadingSkeleton from './ProdectDetailLoading';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Trash2 } from 'lucide-react';
-import ProtectedRoute from './ProtectedRoute';
+import ProtectedRoute from '../ProtectedRoute';
 
 export default function ProductDetail({ productId }) {
   const router = useRouter();

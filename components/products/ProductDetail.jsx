@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, updateQuantity, removeFromCart } from '@/redux/slices/cartSlice';
-import LoadingSkeleton from './products/ProdectDetailLoading';
+import LoadingSkeleton from './ProdectDetailLoading';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Trash2 } from 'lucide-react';
 import ProtectedRoute from './ProtectedRoute';

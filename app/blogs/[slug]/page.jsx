@@ -16,7 +16,7 @@ const blogs = [
   {
     slug: 'how-to-choose-the-right-laptop',
     title: 'How to Choose the Right Laptop',
-    image: '/images/laptop.jpg',
+    image: '/images/ultimate.png',
     date: 'Nov 15, 2025',
     content: [
       'Choosing a laptop in 2025 can be overwhelming with so many models available and new technologies emerging.',
@@ -38,7 +38,7 @@ const blogs = [
   {
     slug: 'fashion-trends-2025',
     title: 'Top Fashion Trends You Can not Miss in 2025',
-    image: '/images/lifestyle.webp',
+    image: '/images/tips.webp',
     date: 'Sep 28, 2025',
     content: [
       '2025 is all about sustainability, comfort, and creativity. Expect eco-friendly fabrics, earthy tones, and minimalist designs to dominate wardrobes.',

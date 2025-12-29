@@ -20,7 +20,7 @@ const blogs = [
     id: 2,
     title: 'How to Choose the Right Laptop',
     slug: 'how-to-choose-the-right-laptop',
-    excerpt: 'Confused about which laptop to buy? Here a simple guide to choosing the perfect one for your needs.', image: '/images/laptop.jpg',
+    excerpt: 'Confused about which laptop to buy? Here a simple guide to choosing the perfect one for your needs.', image: '/images/ultimate.png',
     date: 'Nov 15, 2025'
   },
 
@@ -38,7 +38,7 @@ const blogs = [
     title: 'Stay ahead of the curve with these trending styles dominating',
     slug: 'fashion-trends-2025',
     excerpt: 'Stay ahead of the curve with these trending styles dominating 2025 fashion scene.',
-    image: '/images/lifestyle.webp',
+    image: '/images/tips.webp',
     date: 'Sep 28, 2025'
   },
   {

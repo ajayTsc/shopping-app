@@ -20,7 +20,7 @@ export default function BlogCard({ blog }) {
             href={`/blogs/${blog.slug}`}
             
           >
-           <button className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+           <button className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium hover:bg-blue-700 transition cursor-pointer">
               Read More
             </button>
           </Link>

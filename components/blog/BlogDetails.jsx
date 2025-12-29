@@ -19,7 +19,7 @@ export default function BlogDetail({ blog }) {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 mb-4">
         <button
           onClick={() => router.push('/blogs')}
-          className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors"
+          className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors cursor-pointer"
         >
           <ArrowLeft size={18} />
           Back to Blogs

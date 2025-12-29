@@ -1,22 +1,24 @@
-'use client';
-import { Provider, useDispatch, useSelector } from 'react-redux';
-import { store } from '@/redux/store';
-import { restoreUser } from '@/redux/slices/authSlice';
-import Navbar from '@/components/Navbar';
-import { useEffect, useState } from 'react';
-import { Toaster } from 'react-hot-toast';
-import './globals.css';
+"use client";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { store } from "@/redux/store";
+import { restoreUser } from "@/redux/slices/authSlice";
+import Navbar from "@/components/layout/Navbar";
+import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
+import "./globals.css";
+import Footer from "@/components/layout/Footer";
+import Script from "next/script";
 
 function RestoreUserEffect({ children }) {
   const [restored, setRestored] = useState(false);
-  const { user } = useSelector(state => state.auth);
+  const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    const username = localStorage.getItem('username');
+    const token = localStorage.getItem("authToken");
+    const username = localStorage.getItem("username");
     if (token) {
-      dispatch(restoreUser({ user: { username: username || 'User' }, token }));
+      dispatch(restoreUser({ user: { username: username || "User" }, token }));
     }
     setRestored(true);
   }, [dispatch]);
@@ -25,8 +27,9 @@ function RestoreUserEffect({ children }) {
 
   return (
     <>
-      {user && <Navbar />} 
+      {user && <Navbar />}
       {children}
+      <Footer />
     </>
   );
 }
@@ -35,6 +38,27 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
+
+      
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZVVXZLPFT2"
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZVVXZLPFT2', {
+        page_path: window.location.pathname,
+      });
+    `,
+          }}
+        />
+
         <Provider store={store}>
           <RestoreUserEffect>
             <main className="bg-gray-50 min-h-screen">{children}</main>

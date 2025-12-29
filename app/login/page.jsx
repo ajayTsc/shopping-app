@@ -36,7 +36,7 @@ export default function LoginPage() {
     if (res.meta.requestStatus === 'fulfilled') {
       toast.success('Login successful');
       setTimeout(() => {
-        router.push('/products')
+        router.push('/home')
       }, 1000);
     } else {
       toast.error('Invalid username or password.');

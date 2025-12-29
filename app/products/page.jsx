@@ -2,9 +2,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from '@/redux/slices/productSlice';
-import ProductCard from '@/components/ProductCard';
+import ProductCard from '@/components/products/ProductCard';
 import ProtectedRoute from '@/components/ProtectedRoute';
-import ProductCardSkeleton from '@/components/ProductCardLoading';
+import ProductCardSkeleton from '@/components/products/ProductCardLoading';
 
 export default function ProductsPage() {
   const dispatch = useDispatch();

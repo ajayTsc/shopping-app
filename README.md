@@ -34,3 +34,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+Setup instructions:
+
+Initialize the Project 
+npx create-next-app@latest.
+
+Install Redux Toolkit and React Redux
+
+npm install @reduxjs/toolkit react-redux react-hot-toast lucide-react axios
+
+Start the Project
+npm run dev
+
+
+SEO Strategy
+
+The application was designed with SEO and accessibility in mind:
+
+Page-specific metadata for each page using Next.js Metadata API (export const metadata).
+
+Open Graph meta tags for better social sharing.
+
+Semantic HTML structure (<main>, <header>, <section>, <footer>).
+
+Heading hierarchy: Proper use of <h1> , <h2> , <h3>.
+
+Alt text: Every image includes meaningful alt attributes.
+
+Mobile-friendly design: Ensured with Tailwind responsive utilities.
+
+Lighthouse Performance Scores
+Performance	94%
+Accessibility	88%
+Best Practices	96%
+SEO	98%
+
+Google Analytics (GA4) is integrated to track user engagement and page navigation:
+
+Created a GA4 property and obtained the Measurement ID (G-ZVVXZLPFT2).
+
+Integrated the GA script globally in app/layout.js using <Script> with afterInteractive strategy.
+
+Implemented a custom GAListener component to automatically track route changes and page views.
+
+Verified setup through Google Analytics → Realtime Reports.
